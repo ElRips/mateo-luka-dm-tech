@@ -1,11 +1,32 @@
-// je crée ma fonction Inverser avec l'argument mot
-function Inverser(mot){
-    // j'applique split, reverse, join à "mot" pour découper chaque caractère, les inverser et les réassembler
-        return mot.split("").reverse("").join("");
+/**********************************************
+ * Fonction d'inversion de chaine de caractere
+ *
+ * Entrée : Chaine de caractère
+ * Sortie : Chaine de caractère inversée
+ *
+ **********************************************/
+
+function Reverse_Chaine(chaine)
+{
+    var Chaine_Caractère_Retour = "";
+    var Taille_chaine_a_inverser = chaine.length;
+
+    //Boucle qui parcourt la chaine reçu en partant par la fin
+    //et qui rempli la chaine a renvoyer
+
+    for (var position = Taille_chaine_a_inverser-1 ; position >= 0 ; position--)
+    {
+        Chaine_Caractère_Retour += chaine[position];
     }
-    
-    // je définie la variable entree qui s'applique à la fonction inverser
-    var entree = Inverser('Luka')
-    
-    // j'affiche le résultat de la fonction avec la variable entree
-    console.log(entree)
+
+    //On renvoie la chaine inversée
+
+    return Chaine_Caractère_Retour;
+}
+
+//Test de la fonction
+/* console.log('Inversion de la chaine suivante : ceci_est_un_essai\n');
+console.log(Reverse_Chaine('ceci_est_un_essai'));
+ */
+
+retour = prompt('Inversion de la chaine suivante : ceci_est_un_essai\n' + 'Resultat : ' , Reverse_Chaine('ceci_est_un_essai'));
